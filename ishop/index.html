@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ishop</title>
+    <link rel="stylesheet" type="text/css" href="MyComponent.css">
+</head>
+<body>
+    <div id="container"></div> 
+    <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+    <script src="MyComponent.js"></script>
+    <script>
+        const shopName = "iShop";
+        const columns = ["Product", "Price", "Photo", "Stock balance"];
+        const products = [ 
+            {product: "Black iPhone Speaker", price: "$249.99", photo: React.DOM.img({src:"img/speaker.png"}), balance: 55, code: 100},
+            {product: "Black Headphone", price: "$249.99", photo: React.DOM.img({src:"img/headphone.png"}), balance: 34, code: 110}, 
+            {product: "Mackbook Pro", price: "$2049.99", photo: React.DOM.img({src:"img/mac.png"}), balance: 42, code: 120}
+        ]
+        ReactDOM.render(
+            React.createElement(MyComponent,
+            {shop: shopName, columns: columns, products: products}),
+            document.getElementById("container")
+        );
+    </script>
+</body>
+</html>
