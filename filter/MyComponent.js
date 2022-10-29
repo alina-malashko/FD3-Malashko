@@ -25,7 +25,6 @@ const MyComponent = React.createClass({
         if (this.state.isSorted) {
             wordsArray.sort();
         }
-        //this.setState();
         wordsArray = wordsArray.filter(item => item.includes(this.state.string));
         this.setState({array: wordsArray});
     },
