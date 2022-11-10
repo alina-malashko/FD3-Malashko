@@ -4,10 +4,9 @@ class App extends React.Component {
 
   render() {
     let text = this.props.text;
-    text = text.replace("<br>", " ");
-    text = text.replace("<br/>", " ");
-    text = text.replace("<br />", " ");
-    text = text.split(" ");
+    text = text.replace("<br/>", "<br>");
+    text = text.replace("<br />", "<br>");
+    text = text.split("<br>");
     let result = [];
     for (let i = 0; i < text.length; i++) {
       result.push(text[i]);
