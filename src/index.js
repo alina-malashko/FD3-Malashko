@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import RainbowFrame from './App';
+import RainbowFrame from './RainbowFrame';
 import reportWebVitals from './reportWebVitals';
 
 const colors = ['red', 'orange', 'yellow', 'green', '#00BFFF', 'blue', 'purple'];
-const greeting = "Hello!";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RainbowFrame colors={colors} content={greeting} />
+    <RainbowFrame colors={colors}>
+      Hello!
+    </RainbowFrame>
   </React.StrictMode>
 );
 
