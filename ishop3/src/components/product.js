@@ -27,7 +27,7 @@ class ProductComponent extends React.Component {
                 <td>{this.props.product}</td>
                 <td>${this.props.price}</td>
                 <td>
-                    <img src={this.props.photo} />
+                    <img alt="product" src={this.props.photo} />
                 </td>
                 <td>{this.props.balance}</td>
                 <td>

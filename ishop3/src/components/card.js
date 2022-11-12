@@ -81,7 +81,7 @@ class CardComponent extends React.Component {
                                 <h2>{this.props.product}</h2>
                                 <p>{this.props.price}</p>
                                 <p>{this.props.balance}</p>
-                                <img src={this.props.photo} />
+                                <img alt="product" src={this.props.photo} />
                             </div>
                         </div>
                     : ""

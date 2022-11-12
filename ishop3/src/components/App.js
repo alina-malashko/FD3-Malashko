@@ -48,24 +48,25 @@ class ShopComponent extends React.Component {
         this.setState({itemBalance: balance});
     };
     editProduct = (id, name, price, photo, balance) => {
-        let products = this.state.products;
+        let products = [...this.state.products];
         for (let i = 0; i < products.length; i++) {
             if (products[i].code === id) {
-                products[i].product = name;
-                products[i].price = price;
-                products[i].photo = photo;
-                products[i].balance = balance;
+                let newProduct = {...products[i]};
+                newProduct.product = name;
+                newProduct.price = price;
+                newProduct.photo = photo;
+                newProduct.balance = balance;
+                products[i] = newProduct;
             }
         }
         this.setState({products: products, card: "default", buttonDeleteState: false, buttonEditState: false});
     };
     addProduct = (id, name, price, photo, balance) => {
         let newItem = {product: name, price: price, photo: photo, balance: balance, code: id};
-        let products = this.state.products;
+        let products = [...this.state.products];
         let nextCode = id + 10;
         products.push(newItem);
         this.setState({products: products, card: "default", buttonDeleteState: false, buttonEditState: false, newId: nextCode});
-        console.log(products)
     };
     editButtonState = (boolean) => {
         this.setState({buttonEditState: boolean});
