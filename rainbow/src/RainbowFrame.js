@@ -12,7 +12,7 @@ class RainbowFrame extends React.Component {
                 )
             }, 
                 <div style={{textAlign: "center", fontSize: "34px"}}>
-                    {this.props.content}
+                    {this.props.children}
                 </div>
             )
         )
